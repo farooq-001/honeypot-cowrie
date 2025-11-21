@@ -4,9 +4,12 @@ services:
     container_name: cowrie_honeypot
     restart: unless-stopped
     ports:
-      - "22:2222"
+      - "2222:2222"
     volumes:
       - ./cowrie.cfg:/cowrie/cowrie-git/etc/cowrie.cfg
       - ./userdb.txt:/cowrie/cowrie-git/etc/userdb.txt
+      - ./banner.txt:/cowrie/cowrie-git/share/cowrie/banner.txt
+      - ./motd:/cowrie/cowrie-git/honeyfs/etc/motd
+   
     environment:
       - COWRIE_CONFIGFILE=/cowrie/cowrie-git/etc/cowrie.cfg
