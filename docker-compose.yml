@@ -1,0 +1,12 @@
+services:
+  cowrie:
+    image: ghcr.io/cowrie/cowrie:latest
+    container_name: cowrie_honeypot
+    restart: unless-stopped
+    ports:
+      - "22:2222"
+    volumes:
+      - ./cowrie.cfg:/cowrie/cowrie-git/etc/cowrie.cfg
+      - ./userdb.txt:/cowrie/cowrie-git/etc/userdb.txt
+    environment:
+      - COWRIE_CONFIGFILE=/cowrie/cowrie-git/etc/cowrie.cfg
