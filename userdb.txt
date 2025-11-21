@@ -1,0 +1,2 @@
+farooq:x:Sanem001@
+root:x:Sanem001@
