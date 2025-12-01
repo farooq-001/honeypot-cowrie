@@ -8,7 +8,6 @@ services:
     volumes:
       - ./cowrie.cfg:/cowrie/cowrie-git/etc/cowrie.cfg
       - ./userdb.txt:/cowrie/cowrie-git/etc/userdb.txt
-      - ./banner.txt:/cowrie/cowrie-git/share/cowrie/banner.txt
       - ./file/motd:/cowrie/cowrie-git/honeyfs/etc/motd
       - ./file/df:/cowrie/cowrie-git/share/cowrie/txtcmds/bin/df  
 
